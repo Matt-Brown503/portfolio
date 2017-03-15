@@ -1,0 +1,19 @@
+@import 'bootstrap-compass';
+@import 'bootstrap';
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: .5s;
+	background: linear-gradient(#333, skyblue);
+	height: 100vh;
+	color: #fff;
+
+	h1{
+		color: #fff;
+		border: 1px solid #fff;
+		padding: 10px;
+		background-color: rgba(0,0,0,.2);
+	}
+}
