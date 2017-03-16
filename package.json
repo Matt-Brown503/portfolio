@@ -1,13 +1,17 @@
 {
-  "name": "Bootstrap + Sass boilerplate",
+  "name": "gulp-boilerplate",
   "version": "1.0.0",
-  "description": "Bootstrap, sass, autoprefixer, browser-sync",
+  "description": "My gulp boilerplate for projects",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": {
+    "name": "Matt Brown",
+    "url": "http://matthewbrownpdx.com"
+  },
+  "license": "MIT",
+  "repository": "",
   "devDependencies": {
     "browser-sync": "^2.18.8",
     "del": "^2.2.2",
