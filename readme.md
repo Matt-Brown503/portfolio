@@ -14,19 +14,20 @@ Includes:
 • Browser-sync
 
 
-INSTALL INSTRUCTION:
+INSTALL:
 
 - Clone repo to project directory
 - Run 'npm install' from command line
 
 COMMANDS:
 
-gulp
-	Calling 'gulp' will covert and prefix your sass to css. Afterwards gulp will watch for file changes in your app folder while activly reloading your content locally at localhost:3000. 
+GULP
+Calling 'gulp' will covert and prefix your sass to css. Afterwards gulp will watch for file changes in your app folder while activly reloading your content locally at localhost:3000. 
 
-	NOTE: Browser-sync allows you to view your app externally on any device. In order to do that, use the external IP generated in the command line after running 'gulp'.
+Browser-sync allows you to view your app externally on any device. In order to do that, use the external IP generated in the command line after running 'gulp'.
 
-gulp build
-	Calling 'gulp build' will do the above tasks but copy all the content to a 'build' folder including only the essential files for running your app. The local server now points to your 'build' for testing.
+GULP BUILD
+	
+Calling 'gulp build' will do the above tasks but copy all the content to a 'build' folder including only the essential files for running your app. The local server now points to your 'build' for testing.
 
-	NOTE: 'gulp build' will rebuild your 'build' folder every time you run it so make changes in the 'app' folder or backup any changes you make in the 'build' folder before running 'gulp build'.
+'gulp build' will rebuild your 'build' folder every time you run it so make changes in the 'app' folder or backup any changes you make in the 'build' folder before running 'gulp build'.
