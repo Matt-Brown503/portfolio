@@ -7286,26 +7286,81 @@ button.close {
     display: none !important;
   }
 }
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30%);
+            transform: translateY(-30%);
+  }
+  60% {
+    -webkit-transform: translateY(-15%);
+            transform: translateY(-15%);
+  }
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30%);
+            transform: translateY(-30%);
+  }
+  60% {
+    -webkit-transform: translateY(-15%);
+            transform: translateY(-15%);
+  }
+}
+.bounce {
+  -webkit-animation: bounce 1.5s infinite;
+  animation: bounce 1.5s infinite;
+}
+
 body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.landing {
+  background-color: #262C41;
+  background-image: url("../img/landing-blue.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.landing .container {
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-transition: .5s;
-  transition: .5s;
-  background: -webkit-linear-gradient(#333, skyblue);
-  background: linear-gradient(#333, skyblue);
-  height: 100vh;
-  color: #fff;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
-body h1 {
+
+header h1 {
+  font-weight: bold;
   color: #fff;
-  border: 1px solid #fff;
-  padding: 10px;
-  background-color: rgba(0, 0, 0, 0.2);
+  margin: 0px;
+}
+header h1 span {
+  color: #f09120;
+}
+
+.scroll {
+  position: fixed;
+  top: 85vh;
+  text-align: center;
+  color: #fff;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+.scroll img {
+  width: 50px;
 }

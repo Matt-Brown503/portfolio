@@ -7,13 +7,14 @@ var gulp = require('gulp'),
 	sass = require('gulp-ruby-sass'),
 	notify = require('gulp-notify'),
 	bower = require('gulp-bower'),
-	autoprefixer = require('gulp-autoprefixer');
+	autoprefixer = require('gulp-autoprefixer'),
+	imagemin = require ('gulp-imagemin');
 
 //config files
 var config = {
 	sassPath: './app/scss',
 	bowerDir: './bower_components'
-}
+};
 var autoprefixerOptions = {
 	browsers: ['last 2 versions','>5%','Firefox ESR']
 };
@@ -21,7 +22,7 @@ var autoprefixerOptions = {
 
 gulp.task('bower',function(){
 	return bower()
-		.pipe(gulp.dest(config.bowerDir))
+		.pipe(gulp.dest(config.bowerDir));
 });
 
 
@@ -32,6 +33,11 @@ gulp.task('scripts', function(){
 	.pipe(reload({stream:true}));
 });
 
+gulp.task('images'), function(){
+	gulp.src('app/img/*')
+	.pipe(imagemin())
+	.pipe(gulp.dest('app/img'));
+};
 
 //css
 gulp.task('css', function(){
@@ -48,7 +54,7 @@ gulp.task('css', function(){
 		.pipe(autoprefixer(autoprefixerOptions))
 		.pipe(gulp.dest('./app/css'))
 		.pipe(reload({stream:true}));
-})
+});
 //html
 gulp.task('html', function(){
 	gulp.src('app/**/*.html')
@@ -81,7 +87,7 @@ gulp.task('build:serve', function(){
 			baseDir: './build/'
 		}
 	});
-})
+});
 
 //watch task for sass conversion and browser-sync
 gulp.task('watch', function(){
@@ -97,7 +103,7 @@ gulp.task('browser-sync', function(){
 			baseDir: './app/'
 		}
 	});
-})
+});
 
 //runs when 'gulp' is called in the console
 gulp.task('default', ['scripts','html','css','browser-sync','watch']);

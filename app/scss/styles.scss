@@ -1,19 +1,39 @@
 @import 'bootstrap-compass';
 @import 'bootstrap';
+@import 'variables';
+@import 'animation';
 
 body {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	transition: .5s;
-	background: linear-gradient(#333, skyblue);
-	height: 100vh;
-	color: #fff;
+	font-family: $main-font;
+}
 
-	h1{
-		color: #fff;
-		border: 1px solid #fff;
-		padding: 10px;
-		background-color: rgba(0,0,0,.2);
+.landing {
+	background-color: $main-color;
+	background-image: url('../img/landing-blue.jpg');
+	background-size: cover;
+	background-position: center;
+	.container {
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+	}
+}
+header h1 {
+	font-weight: bold;
+	color: $white;
+	margin: 0px;
+	span {
+		color: $secondary-color;
+	}
+}
+.scroll {
+	position: fixed;
+   	top: 85vh;
+	text-align: center;
+	color: $white;
+	align-self: center;
+	img {
+		width: 50px;
 	}
 }
