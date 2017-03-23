@@ -7418,6 +7418,17 @@ header h1 span {
           justify-content: center;
 }
 
+.work {
+  background-color: #eee;
+}
+
+.site-img {
+  background-image: url("../img/site-img.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 150px;
+}
+
 @media only screen and (min-width: 768px) {
   .about {
     display: -webkit-box;
