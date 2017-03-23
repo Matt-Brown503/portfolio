@@ -5,6 +5,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,700");
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -7321,6 +7322,31 @@ button.close {
 
 body {
   font-family: "Montserrat", sans-serif;
+  text-rendering: optimizeLegibility;
+  text-rendering: geometricPrecision;
+  font-smooth: always;
+  font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+section {
+  padding-bottom: 100px;
+  padding-top: 25px;
+}
+
+header {
+  opacity: 0;
+  -webkit-transition: 2s ease;
+  transition: 2s ease;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 40px;
 }
 
 .landing {
@@ -7360,13 +7386,21 @@ header h1 span {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  opacity: 0;
+  -webkit-transition: 2s;
+  transition: 2s;
 }
 .scroll img {
   width: 4rem;
 }
 
+.load {
+  opacity: 1;
+}
+
 .title {
   text-align: center;
+  padding-bottom: 50px;
 }
 .title p {
   font-weight: 400;
@@ -7383,7 +7417,7 @@ header h1 span {
           flex-direction: column;
 }
 .about .col-sm-3 {
-  background-image: url("../img/sora.png");
+  background-image: url("../img/mypic.jpg");
   background-position: center;
   background-size: cover;
   display: -webkit-box;
@@ -7394,7 +7428,7 @@ header h1 span {
           justify-content: center;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
-  height: 30vh;
+  height: 60vh;
 }
 .about .col-sm-3 p {
   color: #fff;
@@ -7419,17 +7453,179 @@ header h1 span {
 }
 
 .work {
+  padding-bottom: 100px;
+  padding-top: 100px;
   background-color: #eee;
 }
-
-.site-img {
+.work h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-bottom: 1px solid #f09120;
+  padding-bottom: 5px;
+}
+.work .site-content {
+  padding: 0 10px;
+  text-align: center;
+}
+.work .site-content a {
+  background-color: #f09120;
+  padding: 10px 30px;
+}
+.work .col-sm-4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 30px;
+}
+.work .col-sm-4:hover .img-cover {
+  -webkit-transform: translateY(-150px);
+          transform: translateY(-150px);
+  opacity: 0;
+}
+.work .img-cover {
+  position: absolute;
+  height: 250px;
+  width: 90%;
+  background-color: #262C41;
+  opacity: .8;
+  overflow: hidden;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fff;
+}
+.work .site-img {
   background-image: url("../img/site-img.jpg");
   background-size: cover;
   background-position: center;
-  height: 150px;
+  height: 250px;
+  width: 350px;
+}
+
+.study .col-sm-12 {
+  text-align: center;
+}
+
+.th-badge {
+  width: 17%;
+  margin: 3px;
+  -webkit-filter: grayscale(80%);
+          filter: grayscale(80%);
+  opacity: 1;
+  z-index: 1;
+}
+.th-badge:hover {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+}
+
+.badges a:nth-child(1) img {
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+.badges a:nth-child(2) img {
+  -webkit-transition: .7s;
+  transition: .7s;
+}
+.badges a:nth-child(3) img {
+  -webkit-transition: .9s;
+  transition: .9s;
+}
+.badges a:nth-child(4) img {
+  -webkit-transition: 1.1s;
+  transition: 1.1s;
+}
+.badges a:nth-child(5) img {
+  -webkit-transition: 1.3s;
+  transition: 1.3s;
+}
+
+.badge-animate {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  opacity: 1;
+  z-index: 0;
+}
+
+.contact {
+  background-image: url("../img/contact.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.contact .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact-form input {
+  height: 40px;
+}
+.contact-form textarea, .contact-form input {
+  margin-bottom: 5px;
+  resize: none;
+  width: 100%;
+  max-width: 100%;
+  border-radius: 3px;
+  padding: 5px;
+  border: none;
+}
+.contact-form textarea {
+  height: 80px;
+}
+
+footer {
+  height: 10vh;
+  background-color: #222;
 }
 
 @media only screen and (min-width: 768px) {
+  .landing .container {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+
+  .container {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+    -webkit-transition: 1.5s;
+    transition: 1.5s;
+    opacity: 0;
+    -webkit-animation-delay: 3s;
+            animation-delay: 3s;
+  }
+
+  .slide {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+
+  header h1 {
+    font-size: 6rem;
+  }
+
   .about {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -7437,9 +7633,6 @@ header h1 span {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-  .about .title {
-    padding-bottom: 30px;
   }
   .about .content {
     display: -webkit-box;

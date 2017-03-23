@@ -2,10 +2,36 @@
 @import 'bootstrap';
 @import 'variables';
 @import 'animation';
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,700');
 
 body {
 	font-family: $main-font;
+	text-rendering: optimizeLegibility;
+    text-rendering: geometricPrecision;
+    font-smooth: always;
+
+    font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    -webkit-font-smoothing: subpixel-antialiased;
 }
+
+section {
+	padding-bottom: 100px;
+	padding-top: 25px;
+}
+
+header {
+	opacity: 0;
+	transition: 2s ease;
+	animation-delay: 3s;
+
+}
+h1 {
+	font-weight: bold;
+	font-size: 40px;
+}
+
 
 .landing {
 	background-color: $main-color;
@@ -36,10 +62,17 @@ header h1 {
 	img {
 		width: 4rem;
 	}
+	opacity: 0;
+	transition: 2s;
+}
+
+.load {
+	opacity: 1;
 }
 
 .title {
 	text-align: center;
+	padding-bottom: 50px;
 	p {
 		font-weight: 400;
 		font-size: 1.6rem;
@@ -53,13 +86,13 @@ header h1 {
 	}
 	
 	.col-sm-3 {
-		background-image: url('../img/sora.png');
+		background-image: url('../img/mypic.jpg');
 		background-position: center;
 		background-size: cover;
 		display: flex;
 		justify-content: center;
 		filter: grayscale(100%);
-		height: 30vh;
+		height: 60vh;
 		p {
 			color: $white;
 			font-weight: 100;
@@ -79,30 +112,180 @@ header h1 {
 		justify-content: center;
 	}
 }
+
 .work {
+	padding-bottom: 100px;
+	padding-top: 100px;
 	background-color: #eee;
-}
-.site-img {
+	h2 {
+		font-size: 1.5rem;
+		font-weight: 600;
+		border-bottom: 1px solid $secondary-color;
+		padding-bottom: 5px;
+	}
+
+	.site-content {
+		padding: 0 10px;
+		text-align: center;
+		a {
+			background-color: $secondary-color;
+			padding: 10px 30px;
+		}
+	}
+	.col-sm-4 {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin-bottom: 30px;
+		&:hover {
+			.img-cover {
+				transform: translateY(-150px);
+				opacity: 0;
+
+			}
+		}
+
+		
+	}
+	.img-cover {
+		position: absolute;
+		height: 250px;
+		width: 90%;
+		background-color: $main-color;
+		opacity: .8;
+		overflow: hidden;
+		transition: .5s ease;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: $white;
+	}
+	.site-img {
 	background-image: url('../img/site-img.jpg');
 	background-size: cover;
 	background-position: center;
-	height: 150px;
+	height: 250px;
+	width: 350px;
+	}
+
+}
+
+.study {
+	.col-sm-12 {
+		text-align: center;
+	}
+}
+.th-badge {
+		width: 17%;
+		margin: 3px;
+		filter: grayscale(80%);
+		// transform: translateY(-200px);
+		opacity: 1;
+		z-index: 1;
+
+		&:hover {
+			filter: grayscale(0%);
+		}
+	}
+
+	.badges {
+		
+		a:nth-child(1){
+			img {
+				transition: .5s;
+			}
+		}
+		a:nth-child(2){
+			img {
+				transition: .7s;
+			}
+		}
+		a:nth-child(3){
+			img {
+				transition: .9s;
+			}
+		}
+		a:nth-child(4){
+			img {
+				transition: 1.1s;
+			}
+		}
+		a:nth-child(5){
+			img {
+				transition: 1.3s;
+			}
+		}
+	}
+	.badge-animate {
+		transform: translateY(0px);
+		opacity: 1;
+		z-index: 0;
+	}
+.contact {
+	background-image: url('../img/contact.jpg');
+	background-size: cover;
+	background-position: center;
+	
+	.container {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+	}
+}
+.contact-form {
+
+	input {
+		height: 40px;
+	}
+	
+	textarea, input {
+		margin-bottom: 5px;
+		resize: none;
+		width: 100%;
+		max-width: 100%;
+		border-radius: 3px;
+		padding: 5px;
+		border: none;
+	}
+
+	textarea {
+		height: 80px;
+	}
+}
+
+footer {
+	height: 10vh;
+	background-color: #222;
 }
 
 
-
-
-
-
-
-
 @media only screen and (min-width: 768px) {
+
+	.landing {
+		.container {
+			transform: translateY(0px);
+			opacity: 1;
+		}
+	}
+	
+	.container {
+		transform: translateY(100px);
+		transition: 1.5s;
+		opacity: 0;
+		animation-delay: 3s;
+	}
+
+	.slide {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+
+	header h1 {
+		font-size: 6rem;
+	}
 	.about {
 		display: flex;
 		align-items: center;
-		.title{
-			padding-bottom: 30px;
-		}
 		.content {
 			display: flex;
 			flex-direction: row;
