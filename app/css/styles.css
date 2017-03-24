@@ -7347,6 +7347,18 @@ h1 {
   font-size: 40px;
 }
 
+button {
+  background-color: #f09120;
+  border: none;
+  padding: 10px 20px;
+  color: #fff;
+  z-index: 1;
+}
+
+.tool-img {
+  width: 50px;
+}
+
 .landing {
   background-color: #262C41;
   background-image: url("../img/landing-blue.jpg");
@@ -7487,6 +7499,7 @@ header h1 span {
   text-decoration: none;
   -webkit-transition: .5s;
   transition: .5s;
+  z-indx: 2;
 }
 .work .site-content a:hover {
   background-color: #b97019;
@@ -7509,6 +7522,11 @@ header h1 span {
   -webkit-transform: translateY(-150px);
           transform: translateY(-150px);
   opacity: 0;
+  z-index: -1;
+}
+.work .col-sm-4 img {
+  max-width: 100%;
+  height: 100%;
 }
 .work .img-cover {
   position: absolute;
@@ -7533,11 +7551,20 @@ header h1 span {
   font-size: 20px;
 }
 .work .site-img {
-  background-image: url("../img/site-img.jpg");
+  background-color: #222;
   background-size: cover;
   background-position: center;
   height: 250px;
   width: 350px;
+}
+.work .a-group .site-a {
+  background-image: url("../img/sf.jpg");
+}
+.work .a-group .site-b {
+  background-image: url("../img/stellar.jpg");
+}
+.work .a-group .site-c {
+  background-image: url("../img/quotes.jpg");
 }
 
 .study .col-sm-12 {
@@ -7676,13 +7703,13 @@ footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding: 20px;
   }
   .about .col-sm-3 {
     height: auto;
@@ -7696,31 +7723,32 @@ footer {
     height: 50px;
   }
 
-  .slide-a {
-    -webkit-transform: translateX(150%);
-            transform: translateX(150%);
-  }
-
-  .slide-b {
+  .a-off {
     -webkit-transform: translateX(-150%);
             transform: translateX(-150%);
+    opacity: 0;
+  }
+
+  .b-off {
+    -webkit-transform: translateX(150%);
+            transform: translateX(150%);
+    opacity: 0;
   }
 
   .work button {
-    position: absolute;
+    position: relative;
   }
   .work .container {
     height: 600px;
+    text-align: center;
   }
-  .work .a {
+  .work .a-group {
     position: fixed;
-    color: blue;
     -webkit-transition: 1.5s;
     transition: 1.5s;
   }
-  .work .b {
+  .work .b-group {
     position: fixed;
-    color: red;
     -webkit-transition: 1.5s;
     transition: 1.5s;
   }

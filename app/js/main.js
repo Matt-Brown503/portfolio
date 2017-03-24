@@ -27,8 +27,8 @@ $(document).ready(function(){
 
 
     	$('button').click(function(){
-    		$('.a').toggleClass(' slide-a');
-    		$('.b').toggleClass(' slide-b');
+    		$('.a-group').toggleClass(' a-off');
+    		$('.b-group').toggleClass(' b-off');
     	});
 
 
