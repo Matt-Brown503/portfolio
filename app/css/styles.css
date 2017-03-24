@@ -7469,11 +7469,15 @@ header h1 span {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 15px;
 }
 .about .col-sm-2 img {
   width: 70px;
   height: 70px;
+  opacity: .5;
 }
 
 .work {
@@ -7518,11 +7522,10 @@ header h1 span {
           justify-content: center;
   margin-bottom: 30px;
 }
-.work .col-sm-4:hover .img-cover {
+.work .col-sm-4:hover .img-cover, .work .col-sm-4:focus .img-cover {
   -webkit-transform: translateY(-150px);
           transform: translateY(-150px);
   opacity: 0;
-  z-index: -1;
 }
 .work .col-sm-4 img {
   max-width: 100%;
@@ -7535,8 +7538,8 @@ header h1 span {
   background-color: #262C41;
   opacity: .8;
   overflow: hidden;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
+  -webkit-transition: all .5s;
+  transition: all .5s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
