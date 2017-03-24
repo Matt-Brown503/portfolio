@@ -8,9 +8,7 @@ body {
 	font-family: $main-font;
 	text-rendering: optimizeLegibility;
     text-rendering: geometricPrecision;
-    font-smooth: always;
 
-    font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
     -webkit-font-smoothing: antialiased;
     -webkit-font-smoothing: subpixel-antialiased;
@@ -73,9 +71,13 @@ header h1 {
 .title {
 	text-align: center;
 	padding-bottom: 50px;
+	h1 {
+		margin: 0px;
+	}
 	p {
-		font-weight: 400;
-		font-size: 1.6rem;
+		font-family: 'Roboto';
+		font-weight: 300;
+		font-size: 28px;
 	}
 }
 
@@ -97,11 +99,16 @@ header h1 {
 			color: $white;
 			font-weight: 100;
 			align-self: flex-end;
+			text-align: center;
 		}
 	}
 	.col-sm-7 {
 		padding: 20px 15px;
 		background-color: $secondary-color;
+		h2 {
+			font-weight: bold;
+			font-size: 30px;
+		}
 
 	}
 
@@ -110,6 +117,11 @@ header h1 {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
+		padding: 15px;
+		img {
+			width: 70px;
+			height: 70px;
+		}
 	}
 }
 
@@ -128,8 +140,19 @@ header h1 {
 		padding: 0 10px;
 		text-align: center;
 		a {
+			display: inline-block;
 			background-color: $secondary-color;
 			padding: 10px 30px;
+			color: $white;
+			text-decoration: none;
+			transition: .5s;
+
+			&:hover {
+				background-color: #b97019;
+			}
+		}
+		.tools {
+			opacity: .7;
 		}
 	}
 	.col-sm-4 {
@@ -159,6 +182,8 @@ header h1 {
 		align-items: center;
 		justify-content: center;
 		color: $white;
+		font-weight: bold;
+		font-size: 20px;
 	}
 	.site-img {
 	background-image: url('../img/site-img.jpg');
@@ -225,6 +250,9 @@ header h1 {
 	background-image: url('../img/contact.jpg');
 	background-size: cover;
 	background-position: center;
+	.title {
+		color: $white;
+	}
 	
 	.container {
 		display: flex;
@@ -298,6 +326,44 @@ footer {
 		}
 		.col-sm-3 {
 			height: auto;
+			border-radius: 5px 0px 0px 5px;
+		}
+		.col-sm-2 {
+			border-radius: 0px 5px 5px 0px;
+			img {
+			width: 50px;
+			height: 50px;
+		}
+
+		}
+
+	}
+.slide-a {
+	transform: translateX(150%);
+}
+.slide-b {
+	transform: translateX(-150%);
+}
+
+
+	.work {
+
+		button {
+			position: absolute;
+		}
+
+		.container {
+			height: 600px;
+		}
+		.a {
+			position: fixed;
+			color: blue;
+			transition: 1.5s;
+		}
+		.b {
+			position: fixed;
+			color: red;
+			transition: 1.5s;
 		}
 
 	}

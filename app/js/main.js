@@ -3,7 +3,6 @@ $(document).ready(function(){
 	$('header').addClass(' load');
 	$('.scroll').addClass(' load');
 
-
 		$(window).scroll(function() {
 	        if ($(window).scrollTop() + $(window).height() >= $('.aboutcheck').offset().top-100) {
 	        	$('.aboutcheck').parent().addClass(' slide');
@@ -23,6 +22,13 @@ $(document).ready(function(){
 	        if ($(window).scrollTop() + $(window).height() >= $('.contactcheck').offset().top-100) {
 	        	$('.contactcheck').parent().addClass(' slide');
 	        }
+    	});
+
+
+
+    	$('button').click(function(){
+    		$('.a').toggleClass(' slide-a');
+    		$('.b').toggleClass(' slide-b');
     	});
 
 
