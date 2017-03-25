@@ -7320,70 +7320,6 @@ button.close {
   animation: bounce 1.5s infinite;
 }
 
-@-webkit-keyframes bounce2 {
-  0%, 5% {
-    top: 18em;
-    left: 0;
-    height: 3em;
-    width: 3em;
-  }
-  15% {
-    height: 3.15em;
-    width: 2.9em;
-  }
-  35% {
-    height: 4em;
-    width: 2.5em;
-  }
-  75% {
-    height: 6em;
-    width: 1.2em;
-  }
-  95% {
-    height: 3em;
-    width: 3.5em;
-  }
-  100% {
-    top: 28em;
-    height: .5em;
-    width: 4em;
-  }
-}
-
-@keyframes bounce2 {
-  0%, 5% {
-    top: 18em;
-    left: 0;
-    height: 3em;
-    width: 3em;
-  }
-  15% {
-    height: 3.15em;
-    width: 2.9em;
-  }
-  35% {
-    height: 4em;
-    width: 2.5em;
-  }
-  75% {
-    height: 6em;
-    width: 1.2em;
-  }
-  95% {
-    height: 3em;
-    width: 3.5em;
-  }
-  100% {
-    top: 28em;
-    height: .5em;
-    width: 4em;
-  }
-}
-.bounce2 {
-  -webkit-animation: bounce2 .5s ease-in-out infinite alternate;
-          animation: bounce2 .5s ease-in-out infinite alternate;
-}
-
 body {
   font-family: "Montserrat", sans-serif;
   text-rendering: optimizeLegibility;
@@ -7398,7 +7334,7 @@ p {
 }
 
 section {
-  padding-bottom: 100px;
+  padding-bottom: 80px;
   padding-top: 25px;
 }
 
@@ -7568,6 +7504,10 @@ header h1 span {
   padding-bottom: 100px;
   padding-top: 100px;
   background-color: #eee;
+  .mobile-button-display: inline-block;
+}
+.work .desktop-button {
+  display: none;
 }
 .work h2 {
   font-size: 1.5rem;
@@ -7662,7 +7602,20 @@ header h1 span {
 .work .a-group .site-c {
   background-image: url("../img/frogprint.png");
 }
+.work .b-group .site-a {
+  background-image: url("../img/quotes.jpg");
+}
+.work .b-group .site-b {
+  background-image: url("../img/twitch.jpg");
+}
 
+.study a {
+  text-decoration: none;
+  color: #f09120;
+}
+.study h2 {
+  font-weight: bold;
+}
 .study .col-sm-12 {
   text-align: center;
 }
@@ -7714,6 +7667,15 @@ header h1 span {
 .study .badge-info {
   display: none;
 }
+.study .badge-info-mobile p {
+  display: block;
+  font-size: 20px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  border-radius: 15px;
+  opacity: .6;
+}
 
 .contact {
   background-image: url("../img/contact.jpg");
@@ -7762,6 +7724,14 @@ footer .container {
 }
 
 @media only screen and (min-width: 768px) {
+  section {
+    padding-bottom: 100px;
+  }
+
+  .mobile-button {
+    display: none;
+  }
+
   section {
     padding-top: 125px;
     padding-bottom: 125px;
@@ -7846,8 +7816,9 @@ footer .container {
     opacity: 0;
   }
 
-  .work button {
+  .work .desktop-button {
     position: relative;
+    display: inline-block;
   }
   .work .container {
     height: 700px;
@@ -7883,5 +7854,8 @@ footer .container {
     -webkit-transition: all .5s;
     transition: all .5s;
     overflow: hidden;
+  }
+  .study .badge-info-mobile {
+    display: none;
   }
 }

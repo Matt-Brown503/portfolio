@@ -32,11 +32,15 @@ $(document).ready(function(){
 
 
 
-    	$('button').click(function(){
+    	$('.desktop-button').click(function(){
     		$('.a-group').toggleClass(' a-off');
     		$('.b-group').toggleClass(' b-off');
     	});
-
+    	
+    	$('.mobile-button').click(function(){
+    		$('.b-group').css('display', 'block');
+    		$(this).remove();
+    	});
 
 	
 
@@ -47,6 +51,7 @@ $(document).ready(function(){
 	var badgeInfo = [];
 	var rawDate = [];
 	var date = [];
+	var mobileInfo = [];
 	$.getJSON(myUrl)
 	.done(function(data){
 		badgeList = data.badges;
@@ -69,11 +74,17 @@ $(document).ready(function(){
 			date.push(rawDate[i]);
 		}
 		date = date.join('');
+
+		for (var i = 0; i < badgeInfo.length; i++) {
+			mobileInfo += '<p>'+badgeInfo[i]+'</p>';
+		}
+
 		$('#date').html(date);
 		$('#badges').html(badgeHTML);
 		$('#lessons').html(myBadges);
 		$('#points').html(points);
-
+		$('.badge-info-mobile').html(mobileInfo);
+		
 		
 		
 		
