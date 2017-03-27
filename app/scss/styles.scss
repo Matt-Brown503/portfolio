@@ -76,12 +76,19 @@ header h1 {
 	text-align: center;
 	color: $white;
 	align-self: center;
+
+		img {
+		  height: 3em;
+		  width: 3em;
+		  border-radius: 50%;
+		  margin: 0 auto;
+		  position: relative;
+		}
+
 	&:hover {
 		cursor: pointer;
 	}
-	img {
-		width: 3rem;
-	}
+
 	opacity: 0;
 	transition: 2s;
 }
@@ -112,8 +119,8 @@ header h1 {
 		flex-direction: column;
 	}
 	
-	.col-md-3 {
-		background-image: url('../img/mypic.jpg');
+	.col-sm-3 {
+		background-image: url('../img/portland.jpg');
 		background-position: center;
 		background-size: cover;
 		display: flex;
@@ -127,7 +134,7 @@ header h1 {
 			text-align: center;
 		}
 	}
-	.col-md-7 {
+	.col-sm-7 {
 		padding: 20px 15px;
 		background-color: #eee;
 		h2 {
@@ -156,7 +163,7 @@ header h1 {
 
 	}
 
-	.col-md-2 {
+	.col-sm-2 {
 		background-color: $main-color;
 		display: flex;
 		flex-wrap: wrap;
@@ -213,7 +220,7 @@ header h1 {
 			opacity: .5;
 		}
 	}
-	.col-md-4 {
+	.col-sm-4 {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;

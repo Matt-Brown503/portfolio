@@ -7316,8 +7316,8 @@ button.close {
   }
 }
 .bounce {
-  -webkit-animation: bounce 1.5s infinite;
-  animation: bounce 1.5s infinite;
+  -webkit-animation: bounce 1.5s ease-in-out infinite;
+  animation: bounce 1.5s ease-in-out infinite;
 }
 
 body {
@@ -7403,11 +7403,15 @@ header h1 span {
   -webkit-transition: 2s;
   transition: 2s;
 }
+.scroll img {
+  height: 3em;
+  width: 3em;
+  border-radius: 50%;
+  margin: 0 auto;
+  position: relative;
+}
 .scroll:hover {
   cursor: pointer;
-}
-.scroll img {
-  width: 3rem;
 }
 
 .load {
@@ -7436,8 +7440,8 @@ header h1 span {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.about .col-md-3 {
-  background-image: url("../img/mypic.jpg");
+.about .col-sm-3 {
+  background-image: url("../img/portland.jpg");
   background-position: center;
   background-size: cover;
   display: -webkit-box;
@@ -7450,41 +7454,41 @@ header h1 span {
           filter: grayscale(100%);
   height: 60vh;
 }
-.about .col-md-3 p {
+.about .col-sm-3 p {
   color: #fff;
   font-weight: 100;
   -ms-flex-item-align: end;
       align-self: flex-end;
   text-align: center;
 }
-.about .col-md-7 {
+.about .col-sm-7 {
   padding: 20px 15px;
   background-color: #eee;
 }
-.about .col-md-7 h2 {
+.about .col-sm-7 h2 {
   font-weight: bold;
   font-size: 30px;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
-.about .col-md-7 p {
+.about .col-sm-7 p {
   opacity: .8;
 }
-.about .col-md-7 .media-icons {
+.about .col-sm-7 .media-icons {
   text-align: center;
 }
-.about .col-md-7 .media-icons img {
+.about .col-sm-7 .media-icons img {
   width: 70px;
   background-color: #f09120;
   border-radius: 50px;
   padding: 5px;
   margin: 5px;
 }
-.about .col-md-7 .media-icons img:hover {
+.about .col-sm-7 .media-icons img:hover {
   background-color: #b97019;
 }
-.about .col-md-2 {
+.about .col-sm-2 {
   background-color: #262C41;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7499,7 +7503,7 @@ header h1 span {
           align-items: center;
   padding: 15px;
 }
-.about .col-md-2 img {
+.about .col-sm-2 img {
   width: 70px;
   height: 70px;
   opacity: .5;
@@ -7544,7 +7548,7 @@ header h1 span {
 .work .site-content .tools {
   opacity: .5;
 }
-.work .col-md-4 {
+.work .col-sm-4 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7555,12 +7559,12 @@ header h1 span {
           justify-content: center;
   margin-bottom: 30px;
 }
-.work .col-md-4:hover .img-cover, .work .col-md-4:focus .img-cover {
+.work .col-sm-4:hover .img-cover, .work .col-sm-4:focus .img-cover {
   -webkit-transform: translateY(-150px);
           transform: translateY(-150px);
   opacity: 0;
 }
-.work .col-md-4 img {
+.work .col-sm-4 img {
   max-width: 100%;
   height: 100%;
 }
@@ -7744,20 +7748,16 @@ footer .container .title h1 {
   font-size: 20px;
 }
 
-@media only screen and (mix-width: 990px) {
+@media only screen and (mix-width: 768px) {
   color: red;
   .work .container {
     height: auto;
     text-align: center;
   }
 }
-@media only screen and (min-width: 990px) {
+@media only screen and (min-width: 768px) {
   section {
     padding-bottom: 100px;
-  }
-
-  .mobile-button {
-    display: none;
   }
 
   section {
@@ -7808,7 +7808,7 @@ footer .container .title h1 {
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  .about .col-md-7 {
+  .about .col-sm-7 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -7820,14 +7820,14 @@ footer .container .title h1 {
             flex-direction: column;
     padding: 20px;
   }
-  .about .col-md-3 {
+  .about .col-sm-3 {
     height: auto;
     border-radius: 5px 0px 0px 5px;
   }
-  .about .col-md-2 {
+  .about .col-sm-2 {
     border-radius: 0px 5px 5px 0px;
   }
-  .about .col-md-2 img {
+  .about .col-sm-2 img {
     width: 40px;
     height: 40px;
   }
@@ -7842,6 +7842,10 @@ footer .container .title h1 {
     -webkit-transform: translateX(150%);
             transform: translateX(150%);
     opacity: 0;
+  }
+
+  .mobile-button {
+    display: none;
   }
 
   .work .desktop-button {
