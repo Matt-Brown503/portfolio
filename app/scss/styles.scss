@@ -18,10 +18,6 @@ p {
 	font-size: 16px
 }
 
-section {
-	padding-bottom: 80px;
-	padding-top: 25px;
-}
 
 header {
 	opacity: 0;
@@ -41,7 +37,17 @@ button {
 	color: $white;
 	z-index: 1;
 	border-radius: 5px;
+
+	&:hover {
+				background-color: #b97019;
+	}
 }
+
+section {
+	padding: 50px 0px;
+}
+
+
 
 
 .landing {
@@ -106,7 +112,7 @@ header h1 {
 		flex-direction: column;
 	}
 	
-	.col-sm-3 {
+	.col-md-3 {
 		background-image: url('../img/mypic.jpg');
 		background-position: center;
 		background-size: cover;
@@ -121,7 +127,7 @@ header h1 {
 			text-align: center;
 		}
 	}
-	.col-sm-7 {
+	.col-md-7 {
 		padding: 20px 15px;
 		background-color: #eee;
 		h2 {
@@ -141,12 +147,16 @@ header h1 {
 				border-radius: 50px;
 				padding: 5px;
 				margin: 5px;
+
+				&:hover {
+				background-color: #b97019;
+				}
 			}
 		}
 
 	}
 
-	.col-sm-2 {
+	.col-md-2 {
 		background-color: $main-color;
 		display: flex;
 		flex-wrap: wrap;
@@ -203,7 +213,7 @@ header h1 {
 			opacity: .5;
 		}
 	}
-	.col-sm-4 {
+	.col-md-4 {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
@@ -215,9 +225,6 @@ header h1 {
 				
 			}
 		}
-		p {
-			opacity: .8;
-		}
 		img {
 			max-width: 100%;
 			height: 100%;
@@ -227,21 +234,17 @@ header h1 {
 		
 	}
 	.img-cover {
-		position: absolute;
-		height: 250px;
-		width: 90%;
-		background-color: $main-color;
+		transition: .5s;
 		opacity: .9;
-		overflow: hidden;
-		transition: all .5s;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		color: $white;
-		font-weight: bold;
 		
-
 		p {
+			font-weight: bold;
+			color: $white;
+			text-align: center;
+			padding-top: 110px;
+			width: 100%;
+			height: 250px;
+			background-color: $main-color;
 			font-size: 26px;
 		}
 	}
@@ -398,12 +401,41 @@ header h1 {
 }
 
 footer {
-	.container {
-	
-		transform: translateY(0);
-	}
+	padding-top: 30px;
 	background-color: #222;
 	color: $white;
+	
+	.container {
+		transform: translateY(0);
+		opacity: 1;
+		
+		.media-icons {
+			display: flex;
+			justify-content: space-around;
+			text-align: center;
+
+			img {
+				width: 50px;
+				background-color: $secondary-color;
+				border-radius: 50px;
+				padding: 5px;
+				margin: 5px;
+
+				&:hover {
+				background-color: #b97019;
+				}
+			}
+		}
+
+		.title {
+			h1 {
+				font-size: 20px;
+			}
+			padding: 20px 20px;
+			color: #333;
+			font-weight: 400;
+		}
+	}
 }
 
 
